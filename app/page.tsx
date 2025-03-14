@@ -5,7 +5,7 @@ import Recent from "@/components/Recent";
 import Subscribe from "@/components/Subscribe";
 export default function Home() {
   return (
-    <div className="bg-[#0d0d0d]">
+    <div className="bg-[#0d0d0d] relative">
       <Navbar/>
       <Hero/>
       <Recent/>
