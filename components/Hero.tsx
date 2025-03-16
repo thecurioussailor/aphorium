@@ -8,9 +8,9 @@ const Hero = () => {
   const cards = [1 ,2, 3, 4]; 
 
   return (
-    <div className="relative w-full text-[#dedede] h-auto">
-        <div className="absolute z-50 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-        <div className="pt-48 flex flex-col gap-14 items-center justify-center">
+    <div className="relative w-full text-[#dedede] h-auto z-0">
+        <div className="absolute z-0 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+        <div className="pt-48 flex flex-col gap-14 items-center justify-center z-10">
             <div className="flex justify-center flex-col gap-2">
                 <h1 className="text-7xl font-bold text-center">From Local Ideas</h1>
                 <h1 className="text-7xl font-bold">to Worldwide Influence.</h1>

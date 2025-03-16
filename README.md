@@ -1,24 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aphorium - Modern Blogging Platform
+
+A modern blogging platform built with Next.js, Prisma, and NextAuth.js.
+
+## Features
+
+- Modern UI with Tailwind CSS
+- Authentication with NextAuth.js
+- Database integration with Prisma
+- Responsive design
+- Blog post management
+- User profiles
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ and npm
+- PostgreSQL database
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/aphorium.git
+cd aphorium
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Set up environment variables:
+
+Create a `.env` file in the root directory with the following variables:
+
+```
+# Database
+DATABASE_URL="postgresql://username:password@localhost:5432/aphorium?schema=public"
+
+# NextAuth.js
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-nextauth-secret-key-change-this-in-production"
+
+# OAuth Providers
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+```
+
+4. Set up the database:
+
+```bash
+npx prisma migrate dev --name init
+```
+
+5. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setting up OAuth Providers
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Google
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project
+3. Navigate to "APIs & Services" > "Credentials"
+4. Click "Create Credentials" > "OAuth client ID"
+5. Set the application type to "Web application"
+6. Add "http://localhost:3000" to the authorized JavaScript origins
+7. Add "http://localhost:3000/api/auth/callback/google" to the authorized redirect URIs
+8. Copy the Client ID and Client Secret to your `.env` file
+
+## Database Schema
+
+The database schema includes the following models:
+
+- User: Stores user information
+- Account: Stores OAuth account information
+- Session: Stores user sessions
+- VerificationToken: Stores verification tokens for email verification
+- Post: Stores blog posts
+- Tag: Stores post tags
+- Comment: Stores post comments
+
+## License
+
+This project is licensed under the MIT License.
 
 ## Learn More
 

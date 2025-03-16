@@ -23,7 +23,7 @@ const PostCard = () => {
                 <div className="mt-4">
                     <h1 className="text-2xl font-semibold text-left w-4/5">How to use social media to grow your business</h1>
                 </div>
-                <button className="mt-4 bg-[#1c1c1c] border border-zinc-800 text-[#dedede] px-6 py-2 rounded-md">Read Article</button>
+                <button className="mt-4 bg-[#1c1c1c] border border-zinc-800 text-[#dedede] px-6 py-2 rounded-md cursor-pointer" style={{ cursor: 'pointer' }}>Read Article</button>
             </div>
         </div>
     )
